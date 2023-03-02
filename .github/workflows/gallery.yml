@@ -16,6 +16,8 @@ jobs:
     if: github.repository != 'gautamkrishnar/github-pages-gallery'
     runs-on: ubuntu-latest
     steps:
+      - name: Setup Pages ⚙️
+        uses: actions/configure-pages@fc89b04e7d263ef510d9e77d3a1d088fb2688522
       - name: Checkout 🛎️
         uses: actions/checkout@v3
         with:
