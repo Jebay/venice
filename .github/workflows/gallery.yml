@@ -21,17 +21,17 @@ jobs:
           persist-credentials: false
       - name: Build Gallery 🔧
         run: docker run -v "$(pwd):/work" thumbsupgallery/thumbsup /bin/sh -c "cd /work/ && thumbsup --config config.json"
-      # - name: Package and upload artifact 📦
-      #   uses: actions/upload-pages-artifact@253fd476ed429e83b7aae64a92a75b4ceb1a17cf
-      #   with:
-      #     path: 'build_output'
-      #     name: gh-pages
+      - name: Package and upload artifact 📦
+        uses: actions/upload-pages-artifact@253fd476ed429e83b7aae64a92a75b4ceb1a17cf
+        with:
+          path: 'build_output'
+          name: gh-pages
       - name: Deploy to Github Pages 🚀
         uses: actions/deploy-pages@v1
         with:
           artifact_name: build_output
           token: ${{ secrets.GITHUB_TOKEN }}
-      # - name: Delete artifact 🗑️
-      #   uses: geekyeggo/delete-artifact@v2
-      #   with:
-      #     name: gh-page
+      - name: Delete artifact 🗑️
+        uses: geekyeggo/delete-artifact@v2
+        with:
+          name: gh-page
