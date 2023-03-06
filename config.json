@@ -4,10 +4,9 @@
   "title": "Trip to Venice",
   "sort-albums-by": "title",
   "sort-media-by": "filename",
-  "download-photos": "copy",
   "cleanup": true,
   "theme": "flow",
-  "css": "./custom.css",
+  "theme-style": "./custom.css",
   "footer": "All photos are copyrighted Jibz Photography - Jean-Baptiste Joly",
   "usage-stats": false
 }

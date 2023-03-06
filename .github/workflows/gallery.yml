@@ -13,7 +13,6 @@ permissions:
 jobs:
   test:
     name: Publish Gallery to Github Pages
-    if: github.repository != 'gautamkrishnar/github-pages-gallery'
     runs-on: ubuntu-latest
     steps:
       - name: Setup Pages ⚙️
@@ -37,4 +36,4 @@ jobs:
       - name: Delete artifact 🗑️
         uses: geekyeggo/delete-artifact@v2
         with:
-          name: gh-page
+          name: gh-pages
